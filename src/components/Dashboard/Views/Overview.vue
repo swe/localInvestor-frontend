@@ -82,26 +82,25 @@
       return {
         statsCards: [
           {
-            type: 'warning',
-            icon: 'ti-server',
-            title: 'Capacity',
-            value: '105GB',
-            footerText: 'Updated now',
+            type: 'info',
+            icon: 'ti-wallet',
+            title: 'Balance',
+            value: '$1,345',
+            footerText: 'Updated Just now',
             footerIcon: 'ti-reload'
           },
           {
-            type: 'success',
-            icon: 'ti-wallet',
-            title: 'Revenue',
-            value: '$1,345',
-            footerText: 'Last day',
-            footerIcon: 'ti-calendar'
+            type: 'info',
+            icon: 'ti-cup',
+            title: 'Company rating',
+            footerText: 'Updated Just now',
+            footerIcon: 'ti-reload'
           },
           {
-            type: 'danger',
-            icon: 'ti-pulse',
-            title: 'Errors',
-            value: '23',
+            type: 'info',
+            icon: 'ti-briefcase',
+            title: 'Investing portfolio',
+            // value: '23',
             footerText: 'In the last hour',
             footerIcon: 'ti-timer'
           },
