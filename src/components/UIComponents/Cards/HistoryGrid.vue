@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-md-12">
-      <div class="card">
+      <div class="card fix-no__margin">
         <paper-table :title="title" :sub-title="subTitle" :data="data" :columns="columns">
 
         </paper-table>
