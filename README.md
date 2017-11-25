@@ -28,6 +28,9 @@ screenshot
 
 ## How we built it
 
+* [vue.js](https://github.com/vuejs/vue)
+* [Awesome vue-paper-dashboard](https://github.com/cristijora/vue-paper-dashboard)
+
 ## Challenges we ran into
 
 ## Accomplishments that we're proud of
