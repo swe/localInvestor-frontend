@@ -37,7 +37,7 @@
       </div>
 
       <div class="col-md-6 col-xs-12">
-        <chart-card :chart-data="preferencesChart.data"  chart-type="Pie">
+        <chart-card :chart-data="preferencesChart.data" chart-type="Pie">
           <h4 class="title" slot="title">Email Statistics</h4>
           <span slot="subTitle"> Last campaign performance</span>
           <span slot="footer">
@@ -84,15 +84,8 @@
           {
             type: 'info',
             icon: 'ti-wallet',
-            title: 'Balance',
-            value: '$1,345',
-            footerText: 'Updated Just now',
-            footerIcon: 'ti-reload'
-          },
-          {
-            type: 'info',
-            icon: 'ti-cup',
-            title: 'Company rating',
+            title: 'Your Balance',
+            value: '€ 1,337',
             footerText: 'Updated Just now',
             footerIcon: 'ti-reload'
           },
@@ -106,10 +99,9 @@
           },
           {
             type: 'info',
-            icon: 'ti-twitter-alt',
-            title: 'Followers',
-            value: '+45',
-            footerText: 'Updated now',
+            icon: 'ti-cup',
+            title: 'Company rating',
+            footerText: 'Updated Just now',
             footerIcon: 'ti-reload'
           }
         ],
