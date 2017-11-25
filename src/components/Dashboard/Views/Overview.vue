@@ -76,7 +76,7 @@
 <script>
   import StatsCard from 'components/UIComponents/Cards/StatsCard.vue'
   import ChartCard from 'components/UIComponents/Cards/ChartCard.vue'
-  import HistoryGrid from 'components/UIComponents/Cards/HistoryGrid.vue'
+  import HistoryGrid from 'components/UIComponents/Grids/HistoryGrid.vue'
 
   const historyTableData = [{
     '#': 1,

@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-  import HistoryGrid from 'components/UIComponents/Cards/HistoryGrid.vue'
+  import HistoryGrid from 'components/UIComponents/Grids/HistoryGrid.vue'
   import PaperTable from 'components/UIComponents/PaperTable.vue'
   const tableData = [{
     '#': 1,
