@@ -39,7 +39,7 @@
         default: () => [
           {
             '#': 0,
-            name: 'No companies was credited by you',
+            name: 'No companies were credited by you',
             summary: '',
             'loan %': '',
             'expected date': '',
