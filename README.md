@@ -1,5 +1,20 @@
 # Local Investor Frontend
 
+## Roadmap
+
+* подумать какие графики еще можно впихнуть
+* add companies card
+* add news card
+* add explore feed
+* end overview page
+* user profile page
+* fix text on pages
+* add data loading from backend
+* notifications maybe???
+* presentation
+* beautify README
+* train speech / submit project
+
 ## Company card
 
 * name
@@ -11,29 +26,10 @@
 * credit btn
 * related news
 
-### cards:
-
-* company card
-* news card
-* explore feed
-
-## Roadmap
-
-* Overview
-  * Feed
-  * Statistics
-* Portfolio
-  * History
-  * Statistics
-* Explore
-  * companies' cards
-* User Account
-
 ## To fix
 
 * notifications
   * uncomment: `Dropdown.vue` and `TopNavbar.vue`
-
 
 ---
 
