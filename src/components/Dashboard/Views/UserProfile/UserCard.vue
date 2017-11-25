@@ -6,18 +6,10 @@
     <div class="content">
       <div class="author">
         <img class="avatar border-white" src="static/img/faces/face-2.jpg" alt="...">
-        <h4 class="title">Chet Faker
+        <h4 class="title">User Name
           <br>
-          <a href="#">
-            <small>@chetfaker</small>
-          </a>
         </h4>
       </div>
-      <p class="description text-center">
-        "I like the way you work it
-        <br> No diggity
-        <br> I wanna bag it up"
-      </p>
     </div>
     <hr>
     <div class="text-center">
@@ -38,16 +30,16 @@
       return {
         details: [
           {
-            title: '12',
-            subTitle: 'Files'
+            title: '500 €',
+            subTitle: 'Balance'
           },
           {
-            title: '2GB',
-            subTitle: 'Used'
+            title: '2000 €',
+            subTitle: 'Invested'
           },
           {
-            title: '24,6$',
-            subTitle: 'Spent'
+            title: '730 €',
+            subTitle: 'Profit'
           }
         ]
       }
@@ -58,9 +50,9 @@
         if (remainder === 0) {
           return 'col-md-3 col-md-offset-1'
         } else if (remainder === 2) {
-          return 'col-md-4'
-        } else {
           return 'col-md-3'
+        } else {
+          return 'col-md-4'
         }
       }
     }

@@ -21,8 +21,8 @@
             </div>
   
             <div class="col-xs-3 text-right">
-              <button class="btn btn-sm btn-success btn-icon">
-                <i class="fa fa-envelope"></i>
+              <button class="btn btn-sm btn-default btn-icon">
+                <i class="fa fa-chevron-right"></i>
               </button>
             </div>
           </div>
@@ -35,22 +35,22 @@
   export default {
     data () {
       return {
-        title: 'Team members',
+        title: 'Last investments',
         members: [
           {
             image: 'static/img/faces/face-0.jpg',
-            name: 'Dj Khaled',
-            status: 'Offline'
+            name: 'Pidorskoe radio',
+            status: 'In funding process'
           },
           {
             image: 'static/img/faces/face-1.jpg',
             name: 'Creative Tim',
-            status: 'Available'
+            status: 'Funding finished'
           },
           {
             image: 'static/img/faces/face-1.jpg',
             name: 'Flume',
-            status: 'Busy'
+            status: 'New status'
           }
         ]
       }
