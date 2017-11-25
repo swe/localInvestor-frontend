@@ -3,7 +3,7 @@
 
     <div class="col-md-12">
       <div class="card">
-        <history-grid :title="table1.title" :sub-title="table1.subTitle" :data="table1.data">
+        <history-grid :title="historyTable.title" :sub-title="historyTable.subTitle" :data="historyTable.data">
 
         </history-grid>
       </div>
@@ -58,7 +58,7 @@
     },
     data () {
       return {
-        table1: {
+        historyTable: {
           title: 'Loan Responses Pack #32',
           subTitle: 'You loaned this companies at 12 November',
           data: [...tableData]
