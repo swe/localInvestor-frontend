@@ -2,7 +2,7 @@
 
 ## Roadmap
 
-* Dashboard
+* Overview
   * Feed
   * Statistics
 * Portfolio
