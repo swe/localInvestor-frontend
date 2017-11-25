@@ -6,7 +6,7 @@
         <p class="category">{{subTitle}}</p>
       </slot>
     </div>
-    <div class="content table-responsive table-full-width">
+    <div class="content table-responsive table-full-width fix-x__scroll">
       <table class="table" :class="tableClass">
         <thead>
           <th v-for="column in columns">{{column}}</th>
