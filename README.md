@@ -3,13 +3,19 @@
 ## Company card
 
 * name
-* desctiption
+* description
 * risk
 * due
 * percent
 * progress
 * credit btn
 * related news
+
+### cards:
+
+* company card
+* news card
+* explore feed
 
 ## Roadmap
 
