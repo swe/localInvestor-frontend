@@ -58,7 +58,7 @@
       return {
         table1: {
           title: 'Loan Responses Pack',
-          subTitle: 'You loaned this companies at 8 November',
+          subTitle: 'You loaned this companies November, 8th',
           columns: [...tableColumns],
           data: [...tableData]
         }
