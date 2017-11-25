@@ -1,5 +1,16 @@
 # Local Investor Frontend
 
+## Company card
+
+* name
+* desctiption
+* risk
+* due
+* percent
+* progress
+* credit btn
+* related news
+
 ## Roadmap
 
 * Overview
