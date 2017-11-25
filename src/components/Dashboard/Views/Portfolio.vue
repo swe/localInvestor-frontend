@@ -1,53 +1,53 @@
 <template>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card">
-          <paper-table :title="table1.title" :sub-title="table1.subTitle" :data="table1.data" :columns="table1.columns">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <paper-table :title="table1.title" :sub-title="table1.subTitle" :data="table1.data" :columns="table1.columns">
 
-          </paper-table>
-        </div>
+        </paper-table>
       </div>
-
     </div>
+
+  </div>
 </template>
 <script>
   import PaperTable from 'components/UIComponents/PaperTable.vue'
-  const tableColumns = ['N', 'Name', 'Summary', 'Loan %', 'Expected date', 'Expected Profit']
+  const tableColumns = ['#', 'Name', 'Summary', 'Loan %', 'Expected date', 'Expected Profit']
   const tableData = [{
-    n: 1,
+    '#': 1,
     name: 'Dakota Rice',
-    summary: '$36.738',
-    'loan %': 'Niger',
-    'expected date': 'Oud-Turnhout',
-    'expected profit': 'Oud-Turnhout'
-  },
-  {
-    n: 2,
-    name: 'Minerva Hooper',
-    salary: '$23,789',
-    country: 'Curaçao',
-    city: 'Sinaai-Waas'
-  },
-  {
-    n: 3,
-    name: 'Sage Rodriguez',
-    salary: '$56,142',
-    country: 'Netherlands',
-    city: 'Baileux'
-  },
-  {
-    n: 4,
-    name: 'Philip Chaney',
-    salary: '$38,735',
-    country: 'Korea, South',
-    city: 'Overland Park'
-  },
-  {
-    n: 5,
-    name: 'Doris Greene',
-    salary: '$63,542',
-    country: 'Malawi',
-    city: 'Feldkirchen in Kärnten'
+    summary: '€ 1000',
+    'loan %': '5',
+    'expected date': '8 December',
+    'expected profit': '€ 50'
+  }, {
+    '#': 2,
+    name: 'Dakota Rice',
+    summary: '€ 1000',
+    'loan %': '5',
+    'expected date': '8 December',
+    'expected profit': '€ 50'
+  }, {
+    '#': 3,
+    name: 'Dakota Rice',
+    summary: '€ 1000',
+    'loan %': '5',
+    'expected date': '8 December',
+    'expected profit': '€ 50'
+  }, {
+    '#': 4,
+    name: 'Dakota Rice',
+    summary: '€ 1000',
+    'loan %': '5',
+    'expected date': '8 December',
+    'expected profit': '€ 50'
+  }, {
+    '#': 5,
+    name: 'Dakota Rice',
+    summary: '€ 1000',
+    'loan %': '5',
+    'expected date': '8 December',
+    'expected profit': '€ 50'
   }]
 
   export default {
@@ -57,7 +57,7 @@
     data () {
       return {
         table1: {
-          title: 'Loan Responses Pack',
+          title: 'Loan Responses Pack #2',
           subTitle: 'You loaned this companies at 8 November',
           columns: [...tableColumns],
           data: [...tableData]
