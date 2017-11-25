@@ -1,46 +1,70 @@
 <template>
-  <div>
-
-    <!--Stats cards-->
     <div class="row">
-      <div class="col-lg-3 col-sm-6" v-for="stats in statsCards">
-        <stats-card>
-          <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
-            <i :class="stats.icon"></i>
+      <!--Money Overview-->
+      <div class="col-md-6 col-xs-12">
+        <!--Money Stats cards-->
+        <div class="row">
+          <div class="col-lg-6 col-sm-12" v-for="stats in moneyStatsCards">
+            <stats-card>
+              <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
+                <i :class="stats.icon"></i>
+              </div>
+              <div class="numbers" slot="content">
+                <p>{{stats.title1}}</p>
+                {{stats.value}}
+                <p>{{stats.title2}}</p>
+              </div>
+              <div class="stats" slot="footer">
+                <i :class="stats.footerIcon"></i> {{stats.footerText}}
+              </div>
+            </stats-card>
           </div>
-          <div class="numbers" slot="content">
-            <p>{{stats.title1}}</p>
-            {{stats.value}}
-            <p>{{stats.title2}}</p>
+        </div>
+        <!--Charts-->
+        <div class="row">
+          <div class="col-md-12 col-xs-12">
+            <chart-card :chart-data="paymentsChart.data" :chart-options="paymentsChart.options">
+              <h4 class="title" slot="title">Upcoming payments</h4>
+              <span slot="subTitle">Expected date: 18 December</span>
+              <span slot="footer">Based on your previous incomings</span>
+              <div slot="legend">
+                <i class="fa fa-circle text-success"></i> Last payments
+                <i class="fa fa-circle text-warning"></i> Expected payments
+              </div>
+            </chart-card>
           </div>
-          <div class="stats" slot="footer">
-            <i :class="stats.footerIcon"></i> {{stats.footerText}}
-          </div>
-        </stats-card>
+        </div>
+        <!--Payments history-->
+        <div class="row">
+          history
+        </div>
       </div>
-    </div>
 
-    <!--Charts-->
-    <div class="row">
-
-      <div class="col-md-12 col-xs-12">
-        <chart-card :chart-data="paymentsChart.data" :chart-options="paymentsChart.options">
-          <h4 class="title" slot="title">Upcoming payments</h4>
-          <span slot="subTitle">Expected date: 18 December</span>
-          <span slot="footer">Based on your previous incomings</span>
-          <div slot="legend">
-            <i class="fa fa-circle text-success"></i> Last payments
-            <i class="fa fa-circle text-warning"></i> Expected payments
+      <!--Explore overview-->
+      <div class="col-md-6 col-xs-12 row row-fix">
+        <!--Explore Stats cards-->
+        <div class="row">
+          <div class="col-lg-6 col-sm-12" v-for="stats in exploreCards">
+            <stats-card>
+              <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
+                <i :class="stats.icon"></i>
+              </div>
+              <div class="numbers" slot="content">
+                <p>{{stats.title1}}</p>
+                {{stats.value}}
+                <p>{{stats.title2}}</p>
+              </div>
+              <div class="stats" slot="footer">
+                <i :class="stats.footerIcon"></i> {{stats.footerText}}
+              </div>
+            </stats-card>
           </div>
-        </chart-card>
+        </div>
+        <!--Explore feed-->
+        <div class="row">
+          suggestions/explore feed
+        </div>
       </div>
-
-    </div>
-
-    history
-
-    suggestions/explore
-
   </div>
 </template>
 <script>
@@ -56,7 +80,7 @@
      */
     data () {
       return {
-        statsCards: [
+        moneyStatsCards: [
           {
             type: 'info',
             icon: 'ti-wallet',
@@ -72,7 +96,9 @@
             value: '€ 137',
             footerText: 'Expected on Monday',
             footerIcon: 'ti-time'
-          },
+          }
+        ],
+        exploreCards: [
           {
             type: 'info',
             icon: 'ti-briefcase',
