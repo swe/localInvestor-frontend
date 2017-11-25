@@ -5,17 +5,17 @@ const SidebarStore = {
   sidebarLinks: [
     {
       name: 'Overview',
-      icon: 'ti-panel',
+      icon: 'ti-bar-chart',
       path: '/overview'
     },
     {
       name: 'Portfolio',
-      icon: 'ti-panel',
+      icon: 'ti-briefcase',
       path: '/portfolio'
     },
     {
       name: 'Explore',
-      icon: 'ti-panel',
+      icon: 'ti-eye',
       path: '/explore'
     },
     {
@@ -23,36 +23,6 @@ const SidebarStore = {
       icon: 'ti-user',
       path: '/profile'
     }
-    // {
-    //   name: 'Table List',
-    //   icon: 'ti-view-list-alt',
-    //   path: '/admin/table-list'
-    // },
-    // {
-    //   name: 'Typography',
-    //   icon: 'ti-text',
-    //   path: '/admin/typography'
-    // },
-    // {
-    //   name: 'Icons',
-    //   icon: 'ti-pencil-alt2',
-    //   path: '/admin/icons'
-    // },
-    // {
-    //   name: 'Maps',
-    //   icon: 'ti-map',
-    //   path: '/admin/maps'
-    // },
-    // {
-    //   name: 'Notifications',
-    //   icon: 'ti-bell',
-    //   path: '/admin/notifications'
-    // },
-    // {
-    //   name: 'Company rating',
-    //   icon: 'ti-cup',
-    //   path: '/admin/rating'
-    // }
   ],
   displaySidebar (value) {
     this.showSidebar = value
