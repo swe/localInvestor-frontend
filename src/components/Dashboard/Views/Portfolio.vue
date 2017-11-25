@@ -1,11 +1,11 @@
 <template>
   <div class="row">
+
     <div class="col-md-12">
-      <div class="card">
-        <history-grid :title="table1.title" :sub-title="table1.subTitle" :data="table1.data" :columns="table1.columns">
+      <div class="card card-plain">
+        <paper-table type="hover" :title="table1.title" :sub-title="table1.subTitle" :data="table1.data" :columns="table1.columns">
 
-        </history-grid>
-
+        </paper-table>
       </div>
     </div>
 
@@ -14,6 +14,7 @@
 <script>
   import HistoryGrid from 'components/UIComponents/Cards/HistoryGrid.vue'
   import PaperTable from 'components/UIComponents/PaperTable.vue'
+  const tableColumns = ['#', 'Name', 'Summary', 'Loan %', 'Expected date', 'Expected profit']
   const tableData = [{
     '#': 1,
     name: 'Dakota Rice',
