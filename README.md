@@ -12,6 +12,14 @@
   * companies' cards
 * User Account
 
+## To fix
+
+* notifications
+  * uncomment: `Dropdown.vue` and `TopNavbar.vue`
+
+
+---
+
 ## Links
 
 * [Live demo]()
