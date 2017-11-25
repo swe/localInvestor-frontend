@@ -10,13 +10,15 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "unit:watch": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --watch",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e"
+    "test": "npm run unit && npm run e2e",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "chartist": "^0.10.1",
     "v-click-outside": "0.0.8",
     "vue": "^2.3.0",
+    "vue-gh-pages": "^1.6.4",
     "vue-router": "^2.2.0"
   },
   "devDependencies": {
