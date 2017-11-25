@@ -157,7 +157,7 @@
             type: 'info',
             icon: 'ti-star',
             value: '3',
-            title2: 'Personalized suggestions found',
+            title2: 'Suggestions found',
             footerText: 'Since Yesterday',
             footerIcon: 'ti-time'
           }
