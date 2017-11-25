@@ -3,9 +3,9 @@
 
     <div class="col-md-12">
       <div class="card">
-        <paper-table type="hover" :title="table1.title" :sub-title="table1.subTitle" :data="table1.data" :columns="table1.columns">
+        <history-grid :title="table1.title" :sub-title="table1.subTitle" :data="table1.data">
 
-        </paper-table>
+        </history-grid>
       </div>
     </div>
 
@@ -14,7 +14,6 @@
 <script>
   import HistoryGrid from 'components/UIComponents/Cards/HistoryGrid.vue'
   import PaperTable from 'components/UIComponents/PaperTable.vue'
-  const tableColumns = ['#', 'Name', 'Summary', 'Loan %', 'Expected date', 'Expected profit']
   const tableData = [{
     '#': 1,
     name: 'Dakota Rice',
@@ -62,8 +61,7 @@
         table1: {
           title: 'Loan Responses Pack #32',
           subTitle: 'You loaned this companies at 12 November',
-          // columns: [...tableColumns],
-          gridData: [...tableData]
+          data: [...tableData]
         }
       }
     }
