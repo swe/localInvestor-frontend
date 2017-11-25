@@ -13,11 +13,11 @@ const SidebarStore = {
       icon: 'ti-user',
       path: '/admin/stats'
     },
-    {
-      name: 'Table List',
-      icon: 'ti-view-list-alt',
-      path: '/admin/table-list'
-    },
+    // {
+    //   name: 'Table List',
+    //   icon: 'ti-view-list-alt',
+    //   path: '/admin/table-list'
+    // },
     {
       name: 'Typography',
       icon: 'ti-text',
@@ -37,6 +37,11 @@ const SidebarStore = {
       name: 'Notifications',
       icon: 'ti-bell',
       path: '/admin/notifications'
+    },
+    {
+      name: 'Company rating',
+      icon: 'ti-cup',
+      path: '/admin/rating'
     }
   ],
   displaySidebar (value) {
