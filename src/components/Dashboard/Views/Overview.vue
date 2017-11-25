@@ -36,7 +36,13 @@
         </div>
         <!--Payments history-->
         <div class="row">
-          history
+          <div class="col-md-12">
+            <div class="card">
+              <history-grid :title="historyTable.title" :sub-title="historyTable.subTitle" :data="historyTable.data">
+
+              </history-grid>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -70,8 +76,48 @@
 <script>
   import StatsCard from 'components/UIComponents/Cards/StatsCard.vue'
   import ChartCard from 'components/UIComponents/Cards/ChartCard.vue'
+  import HistoryGrid from 'components/UIComponents/Cards/HistoryGrid.vue'
+
+  const historyTableData = [{
+    '#': 1,
+    name: 'Dakota Rice',
+    summary: '€ 1000',
+    'loan %': '5',
+    'expected date': '8 December',
+    'expected profit': '€ 50'
+  }, {
+    '#': 2,
+    name: 'Dakota Rice',
+    summary: '€ 1000',
+    'loan %': '5',
+    'expected date': '8 December',
+    'expected profit': '€ 50'
+  }, {
+    '#': 3,
+    name: 'Dakota Rice',
+    summary: '€ 1000',
+    'loan %': '5',
+    'expected date': '8 December',
+    'expected profit': '€ 50'
+  }, {
+    '#': 4,
+    name: 'Dakota Rice',
+    summary: '€ 1000',
+    'loan %': '5',
+    'expected date': '8 December',
+    'expected profit': '€ 50'
+  }, {
+    '#': 5,
+    name: 'Dakota Rice',
+    summary: '€ 1000',
+    'loan %': '5',
+    'expected date': '8 December',
+    'expected profit': '€ 50'
+  }]
+
   export default {
     components: {
+      HistoryGrid,
       StatsCard,
       ChartCard
     },
@@ -131,6 +177,11 @@
             },
             height: '245px'
           }
+        },
+        historyTable: {
+          title: 'Loan Responses Pack #32',
+          subTitle: 'You loaned this companies at 12 November',
+          data: [...historyTableData]
         }
       }
     }
