@@ -7,11 +7,6 @@ import Overview from 'src/components/Dashboard/Views/Overview.vue'
 import Portfolio from 'src/components/Dashboard/Views/Portfolio.vue'
 import Explore from 'src/components/Dashboard/Views/Explore.vue'
 import UserProfile from 'src/components/Dashboard/Views/UserProfile.vue'
-// import Notifications from 'src/components/Dashboard/Views/Notifications.vue'
-// import Icons from 'src/components/Dashboard/Views/Icons.vue'
-// import Maps from 'src/components/Dashboard/Views/Maps.vue'
-// import Typography from 'src/components/Dashboard/Views/Typography.vue'
-// import TableList from 'src/components/Dashboard/Views/TableList.vue'
 
 const routes = [
   {
@@ -22,7 +17,6 @@ const routes = [
   {
     path: '/',
     component: DashboardLayout,
-    // redirect: '/admin/stats',
     children: [
       {
         path: 'overview',
@@ -44,31 +38,6 @@ const routes = [
         name: 'Profile',
         component: UserProfile
       }
-      // {
-      //   path: 'notifications',
-      //   name: 'notifications',
-      //   component: Notifications
-      // },
-      // {
-      //   path: 'icons',
-      //   name: 'icons',
-      //   component: Icons
-      // },
-      // {
-      //   path: 'maps',
-      //   name: 'maps',
-      //   component: Maps
-      // },
-      // {
-      //   path: 'typography',
-      //   name: 'typography',
-      //   component: Typography
-      // },
-      // {
-      //   path: 'table-list',
-      //   name: 'table-list',
-      //   component: TableList
-      // },
     ]
   },
   {path: '*', component: NotFound}
