@@ -2,17 +2,18 @@
   <div class="row">
     <div class="col-md-12">
       <div class="card">
-        <paper-table :title="table1.title" :sub-title="table1.subTitle" :data="table1.data" :columns="table1.columns">
+        <history-grid :title="table1.title" :sub-title="table1.subTitle" :data="table1.data" :columns="table1.columns">
 
-        </paper-table>
+        </history-grid>
+
       </div>
     </div>
 
   </div>
 </template>
 <script>
+  import HistoryGrid from 'components/UIComponents/Cards/HistoryGrid.vue'
   import PaperTable from 'components/UIComponents/PaperTable.vue'
-  const tableColumns = ['#', 'Name', 'Summary', 'Loan %', 'Expected date', 'Expected Profit']
   const tableData = [{
     '#': 1,
     name: 'Dakota Rice',
@@ -52,15 +53,16 @@
 
   export default {
     components: {
+      HistoryGrid,
       PaperTable
     },
     data () {
       return {
         table1: {
-          title: 'Loan Responses Pack #2',
-          subTitle: 'You loaned this companies at 8 November',
-          columns: [...tableColumns],
-          data: [...tableData]
+          title: 'Loan Responses Pack #32',
+          subTitle: 'You loaned this companies at 12 November',
+          // columns: [...tableColumns],
+          gridData: [...tableData]
         }
       }
     }
