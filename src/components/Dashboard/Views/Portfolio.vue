@@ -12,13 +12,14 @@
 </template>
 <script>
   import PaperTable from 'components/UIComponents/PaperTable.vue'
-  const tableColumns = ['N', 'Name', 'Summary', 'Loan %', 'Expected Date', 'Expected Profit']
+  const tableColumns = ['N', 'Name', 'Summary', 'Loan %', 'Expected date', 'Expected Profit']
   const tableData = [{
     n: 1,
     name: 'Dakota Rice',
     summary: '$36.738',
-    loan: 'Niger',
-    expected_date: 'Oud-Turnhout'
+    'loan %': 'Niger',
+    'expected date': 'Oud-Turnhout',
+    'expected profit': 'Oud-Turnhout'
   },
   {
     n: 2,
