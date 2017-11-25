@@ -1,18 +1,13 @@
 <template>
   <div class="row">
+    <company-card type="hover" :title="table1.title" :sub-title="table1.subTitle" :data="table1.data" :columns="table1.columns">
 
-    <div class="col-md-12">
-      <div class="card card-plain">
-        <paper-table type="hover" :title="table1.title" :sub-title="table1.subTitle" :data="table1.data" :columns="table1.columns">
-
-        </paper-table>
-      </div>
-    </div>
-
+    </company-card>
   </div>
 </template>
 <script>
   import PaperTable from 'components/UIComponents/PaperTable.vue'
+  import CompanyCard from 'components/UIComponents/Cards/CompanyCard.vue'
   const tableColumns = ['No', 'Name', 'Location', 'Risks', 'Return']
   const tableData = [
     {
@@ -33,7 +28,8 @@
 
   export default {
     components: {
-      PaperTable
+      PaperTable,
+      CompanyCard
     },
     data () {
       return {

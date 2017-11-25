@@ -1,31 +1,46 @@
 <template>
-  <div class="card">
+  <div class="card col-md-6 col-xs-12">
     <div class="header">
-      <slot name="title"></slot>
+      <h4 class="no-top__margin">{{company.title}}</h4>
       <p class="category">
-        <slot name="subTitle"></slot>
+        <slot name="subTitle">{{company.description}}</slot>
       </p>
     </div>
     <div class="content">
-      <div :id="chartId" class="ct-chart"></div>
+      <div>
+        ## Company card
+
+        * risk
+        * due
+        * percent
+        * progress
+        * credit btn
+        * related news
+        * based on your
+      </div>
+
       <div class="footer">
-        <div class="chart-legend">
-          <slot name="legend"></slot>
-        </div>
         <hr>
         <div class="stats">
-          <slot name="footer"></slot>
-        </div>
-        <div class="pull-right">
+          {{company.basedOn}}
         </div>
       </div>
     </div>
-
   </div>
 </template>
 <script>
+  const getRandomInt = function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
+  const basedOn = [
+    'based on your Facebook likes',
+    'based on your previous transactions',
+    'based on your Swarm check-ins',
+    'help them to reach the goal',
+    ''
+  ]
   export default {
-    name: 'chart-card',
+    name: 'company-card',
     props: {
       footerText: {
         type: String,
@@ -57,7 +72,11 @@
     },
     data () {
       return {
-        chartId: 'no-id'
+        company: {
+          title: 'Title of company',
+          description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
+          basedOn: basedOn[getRandomInt(0, basedOn.length)]
+        }
       }
     },
     methods: {
