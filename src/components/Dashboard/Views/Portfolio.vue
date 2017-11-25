@@ -2,7 +2,7 @@
   <div class="row">
 
     <div class="col-md-12">
-      <div class="card card-plain">
+      <div class="card">
         <paper-table type="hover" :title="table1.title" :sub-title="table1.subTitle" :data="table1.data" :columns="table1.columns">
 
         </paper-table>
