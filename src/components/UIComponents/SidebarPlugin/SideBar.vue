@@ -9,9 +9,9 @@
       <div class="logo">
         <a href="#" class="simple-text">
             <div class="logo-img">
-                <img src="static/img/vue-logo.png" alt="">
+                <img src="static/img/logo.png" alt="">
             </div>
-          Paper Dashboard
+          Local Investor
         </a>
       </div>
       <slot>
@@ -48,7 +48,7 @@
       },
       backgroundColor: {
         type: String,
-        default: 'black',
+        default: 'darkblue',
         validator: (value) => {
           let acceptedValues = ['white', 'black', 'darkblue']
           return acceptedValues.indexOf(value) !== -1
@@ -56,7 +56,7 @@
       },
       activeColor: {
         type: String,
-        default: 'success',
+        default: 'info',
         validator: (value) => {
           let acceptedValues = ['primary', 'info', 'success', 'warning', 'danger']
           return acceptedValues.indexOf(value) !== -1
