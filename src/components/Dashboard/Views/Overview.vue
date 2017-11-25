@@ -41,7 +41,7 @@
       </div>
 
       <!--Explore overview-->
-      <div class="col-md-6 col-xs-12 row row-fix">
+      <div class="col-md-6 col-xs-12 row fix-row__margin">
         <!--Explore Stats cards-->
         <div class="row">
           <div class="col-lg-6 col-sm-12" v-for="stats in exploreCards">
