@@ -13,8 +13,8 @@
         <!--<div class="row">-->
         {{current}}
         <loading-progress :shape="'line'"
-                          :size="'200'"
-                          :width="'200'"
+                          :size="'150'"
+                          :width="'150'"
                           :height="'6'"
                           :progress="0.30"
                           :indeterminate="false"
