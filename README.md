@@ -3,14 +3,12 @@
 ## Roadmap
 
 ###Fedor:
-* add companies card
-* add news card
-* add explore feed
 * beautify README
 
 ###Fronts: 
 * add data loading from backend
 * fix text on pages
+* beautify test data
 
 ###Ivan:
 * user profile page
