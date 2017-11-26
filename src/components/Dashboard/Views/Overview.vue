@@ -101,7 +101,7 @@
     request.onload = function () {
       if (this.status === 401) {
         let data = JSON.parse(this.response)
-        let sessionKey = getParameterByName('session_key')
+        let sessionKey = getParameterByName('session-key')
 
         if (sessionKey) {
           Cookies.set('key', sessionKey)
