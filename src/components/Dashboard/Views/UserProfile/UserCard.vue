@@ -5,8 +5,8 @@
     </div>
     <div class="content">
       <div class="author">
-        <img class="avatar border-white" src="static/img/faces/face-2.jpg" alt="...">
-        <h4 class="title">User Name
+        <img class="avatar border-white" src="static/img/faces/face-1.jpg" alt="...">
+        <h4 class="title">John Doe
           <br>
         </h4>
       </div>
@@ -30,7 +30,7 @@
       return {
         details: [
           {
-            title: '500 €',
+            title: '5000 €',
             subTitle: 'Balance'
           },
           {

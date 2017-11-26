@@ -199,38 +199,38 @@
   const historyTableData = [{
     '#': 1,
     name: 'Creaturers',
-    summary: '10000 €',
+    summary: '1000 €',
     'loan %': '5',
     'expected date': '8 December',
-    'expected profit': '€ 400'
+    'expected profit': '50 €'
   }, {
     '#': 2,
     name: 'Superfall, LLC',
-    summary: '€ 3000',
+    summary: '3000 €',
     'loan %': '5',
     'expected date': '8 December',
-    'expected profit': '€ 100'
+    'expected profit': '150 €'
   }, {
     '#': 3,
     name: 'Markuu Lauri farm',
-    summary: '€ 5500',
+    summary: '5000 €',
     'loan %': '5',
     'expected date': '8 December',
-    'expected profit': '€ 125'
+    'expected profit': '250 €'
   }, {
     '#': 4,
     name: 'Right Flight Inc.',
-    summary: '€ 100000',
+    summary: '1000 €',
     'loan %': '5',
     'expected date': '8 December',
-    'expected profit': '€ 500'
+    'expected profit': '50 €'
   }, {
     '#': 5,
     name: 'Phonogator',
-    summary: '€ 7000',
+    summary: '7000 €',
     'loan %': '5',
     'expected date': '8 December',
-    'expected profit': '€ 350'
+    'expected profit': '350 €'
   }]
 
   export default {
