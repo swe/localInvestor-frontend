@@ -164,6 +164,7 @@
   ]
 
   const companiesArr = [
+          // @TODO add custom based on text for each card
     {
       title: 'Title of the company',
       description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
