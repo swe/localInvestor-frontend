@@ -52,6 +52,12 @@ We have gorgeous features, like:
 * for dev: `npm run dev`
 * deploy: `npm run build && gcloud app deploy`
 
+### Nordea API login
+
+* choose `Mobile offline`
+* any LOGIN ID
+* code from app: `111111`
+
 ## What's next for Local Investor
 
 We will be happy to realize this platform
