@@ -6,7 +6,8 @@
 * [Backend source](https://github.com/swe/localInvestor-backend)
 * [Devpost page](https://devpost.com/software/local-investor)
 
-screenshots
+![Overview page](https://raw.githubusercontent.com/swe/localInvestor-frontend/master/devpost/screenshots/screen1.jpg)
+![Company card](https://raw.githubusercontent.com/swe/localInvestor-frontend/master/devpost/screenshots/screen2.jpg)
 
 ## Inspiration 
 
