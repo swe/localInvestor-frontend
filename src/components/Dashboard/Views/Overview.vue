@@ -149,9 +149,33 @@
           'based on your Swarm check-ins',
           'help them to reach the goal'
         ],
-        title: [],
-        description: [],
-        returnDate: []
+        title: [
+          'Creaturers',
+          'Superfall, LLC',
+          'Markuu Lauri farm',
+          'Right Flight Inc.',
+          'Phonogator',
+          'Samplaa Int',
+          'SuperSec'
+        ],
+        description: [
+          'Young and ambitious web-studio from Helsinki. We need money to relocate to an office because now we are based at home',
+          'Creating amazing games and need money to start PR of new game.',
+          'I need your help to start selling my organic milk and farm goods',
+          'Cheap airplanes for often travelling',
+          'Phonogator is a brand new Nokia! Make Finland great again (in IT world)',
+          'Samplaa ip amazing tasty dishes. We need money to open new menu - Sushi',
+          'SuperSec - we provide you secured phone calls and messages. And own launcher for Android'
+        ],
+        returnDate: [
+          '3.12.2017',
+          '11.01.2018',
+          '30.11.2017',
+          '24.12.2017',
+          '09.12.2017',
+          '10.12.2017',
+          '01.02.2018'
+        ]
       }
       let arr = []
       for (let i = 0; i < max; i++) {
