@@ -45,32 +45,32 @@
       </div>
     </div>
 
-      <!--Explore overview-->
-      <div class="col-md-6 col-xs-12 row fix-row__margin">
-        <!--Explore Stats cards-->
-        <div class="row">
-          <div class="col-lg-6 col-sm-12" v-for="stats in exploreCards">
-            <stats-card>
-              <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
-                <i :class="stats.icon"></i>
-              </div>
-              <div class="stats" slot="footer">
-                <i :class="stats.footerIcon"></i> {{stats.footerText}}
-              </div>
-              <div class="numbers" slot="content">
-                {{stats.value}}
-                <p>{{stats.title}}</p>
-              </div>
-            </stats-card>
-          </div>
-        </div>
-        <!--Explore feed-->
-        <div class="row">
-          <explore-grid type="hover" :data="companies.data">
-
-          </explore-grid>
+    <!--Explore overview-->
+    <div class="col-md-6 col-xs-12 row fix-row__margin">
+      <!--Explore Stats cards-->
+      <div class="row">
+        <div class="col-lg-6 col-sm-12" v-for="stats in exploreCards">
+          <stats-card>
+            <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
+              <i :class="stats.icon"></i>
+            </div>
+            <div class="stats" slot="footer">
+              <i :class="stats.footerIcon"></i> {{stats.footerText}}
+            </div>
+            <div class="numbers" slot="content">
+              {{stats.value}}
+              <p>{{stats.title}}</p>
+            </div>
+          </stats-card>
         </div>
       </div>
+      <!--Explore feed-->
+      <div class="row">
+        <explore-grid type="hover" :data="companies.data">
+
+        </explore-grid>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -80,39 +80,44 @@
   import ExploreGrid from 'components/UIComponents/Grids/ExploreGrid.vue'
   import Cookies from 'js-cookie'
 
-  console.log(Cookies.get())
+  let nordeaKey = Cookies.get('key')
+  if (nordeaKey) {
+    // we already have nordea api key
 
-  function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-  }
-
-  var request = new XMLHttpRequest()
-  request.open('GET', 'https://api-dot-junction-tyzzo.appspot.com/api/requests', true)
-  request.onload = function () {
-    if (this.status === 401) {
-      var data = JSON.parse(this.response)
-      var key = getParameterByName('session_key')
-      console.log(key)
-      if(true) {
-
-      } else {
-        window.location.href = data['redirect']
-      }
-    } else {
-      // We reached our target server, but it returned an error
-
+  } else {
+    // we need to get nordea API key
+    let getParameterByName = function (name, url) {
+      if (!url) url = window.location.href
+      name = name.replace(/[[\]]/g, '\\$&')
+      let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
+      let results = regex.exec(url)
+      if (!results) return null
+      if (!results[2]) return ''
+      return decodeURIComponent(results[2].replace(/\+/g, ' '))
     }
+
+    let request = new XMLHttpRequest()
+    request.open('GET', 'https://api-dot-junction-tyzzo.appspot.com/api/requests', true)
+    request.onload = function () {
+      if (this.status === 401) {
+        let data = JSON.parse(this.response)
+        let sessionKey = getParameterByName('session_key')
+
+        if (sessionKey) {
+          Cookies.set('key', sessionKey)
+        } else {
+          window.location.href = data['redirect']
+        }
+      } else {
+        // We reached our target server, but it returned an error
+
+      }
+    }
+    request.onerror = function () {
+      // There was a connection error of some sort
+    }
+    request.send()
   }
-  request.onerror = function () {
-    // There was a connection error of some sort
-  }
-  request.send()
 
   const historyTableData = [{
     '#': 1,
