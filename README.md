@@ -2,17 +2,25 @@
 
 ## Roadmap
 
-* подумать какие графики еще можно впихнуть
+###Fedor:
 * add companies card
 * add news card
 * add explore feed
-* end overview page
-* user profile page
-* fix text on pages
+
+###Fronts: 
 * add data loading from backend
-* notifications maybe???
+
+###Ivan:
+* user profile page
+* end overview page
+
+###Rodion:
+* fix text on pages
 * presentation
 * beautify README
+
+###Everyone
+* подумать какие графики еще можно впихнуть
 * train speech / submit project
 
 ## Company card
