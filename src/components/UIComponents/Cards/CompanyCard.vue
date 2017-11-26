@@ -1,13 +1,13 @@
 <template>
   <div class="card col-md-6 col-xs-12">
     <div class="header">
-      <h4 class="no-top__margin">{{company.title}}</h4>
+      <h4 class="no-top__margin">{{title}}</h4>
       <p class="category">
-        <slot name="subTitle">{{company.description}}</slot>
+        <slot name="subTitle">{{description}}</slot>
       </p>
     </div>
     <div class="content">
-      <paper-table :data="company.tableData" :columns="tableColumns">
+      <paper-table :data="data" :columns="tableColumns">
 
       </paper-table>
       <div>
@@ -18,7 +18,7 @@
       <div class="footer">
         <hr>
         <div class="stats">
-          {{company.basedOn}}
+          {{basedOn}}
         </div>
       </div>
     </div>
@@ -43,71 +43,58 @@
       PaperTable
     },
     props: {
-      footerText: {
+      title: {
         type: String,
-        default: ''
+        default: 'Title of the company'
       },
-      headerTitle: {
+      description: {
         type: String,
-        default: 'Chart title'
+        default: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.'
       },
-      chartType: {
+      basedOn: {
         type: String,
-        default: 'Line' // Line | Pie | Bar
+        default: basedOn[getRandomInt(0, basedOn.length)]
       },
-      chartOptions: {
-        type: Object,
-        default: () => {
-          return {}
-        }
+      tableColumns: {
+        type: Array,
+        default: () => ['Due date', 'Progress', 'Percent', 'Risk']
       },
-      chartData: {
-        type: Object,
-        default: () => {
-          return {
-            labels: [],
-            series: []
-          }
-        }
-      }
-    },
-    data () {
-      return {
-        tableColumns: ['Due date', 'Progress', 'Percent', 'Risk'],
-        company: {
-          title: 'Title of company',
-          description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
-          basedOn: basedOn[getRandomInt(0, basedOn.length)],
-          tableData: [{
+      data: {
+        type: Array,
+        default: () => [
+          {
             'Due date': '28.12.2018',
             'Progress': 'PROGRESS BAR HERE',
             'Percent': '4%',
             'Risk': 'STARS HERE'
-          }]
-        }
+          }
+        ]
       }
+    },
+    data () {
+      return {}
     },
     methods: {
       /***
        * Initializes the chart by merging the chart options sent via props and the default chart options
        */
       initCard () {
-
+        console.log(this.tableData)
       },
       /***
        * Assigns a random id to the chart
        */
-      updateChartId () {
+      updateCardId () {
         var currentTime = new Date().getTime().toString()
         var randomInt = this.getRandomInt(0, currentTime)
-        this.chartId = `div_${randomInt}`
+        this.cardId = `div_${randomInt}`
       },
       getRandomInt (min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min
       }
     },
     mounted () {
-      this.updateChartId()
+      this.updateCardId()
       this.$nextTick(this.initCard)
     }
   }
