@@ -218,7 +218,7 @@
           },
           {
             type: 'info',
-            icon: 'ti-star icon-warning',
+            icon: 'ti-star',
             value: '3',
             title: 'Suggestions',
             footerText: 'Since Yesterday',
