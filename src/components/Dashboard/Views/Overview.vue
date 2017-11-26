@@ -201,35 +201,35 @@
     name: 'Creaturers',
     summary: '1000 €',
     'loan %': '5',
-    'expected date': '8 December',
+    'expected date': '3.12.2017',
     'expected profit': '50 €'
   }, {
     '#': 2,
     name: 'Superfall, LLC',
     summary: '3000 €',
     'loan %': '5',
-    'expected date': '8 December',
+    'expected date': '11.01.2018',
     'expected profit': '150 €'
   }, {
     '#': 3,
     name: 'Markuu Lauri farm',
     summary: '5000 €',
     'loan %': '5',
-    'expected date': '8 December',
+    'expected date': '30.11.2017',
     'expected profit': '250 €'
   }, {
     '#': 4,
     name: 'Right Flight Inc.',
     summary: '1000 €',
     'loan %': '5',
-    'expected date': '8 December',
+    'expected date': '24.12.2017',
     'expected profit': '50 €'
   }, {
     '#': 5,
     name: 'Phonogator',
     summary: '7000 €',
     'loan %': '5',
-    'expected date': '8 December',
+    'expected date': '09.12.2017',
     'expected profit': '350 €'
   }]
 
