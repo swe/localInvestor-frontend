@@ -226,7 +226,7 @@
             type: 'info',
             icon: 'ti-wallet icon-success',
             title: 'Your Balance',
-            value: '500 €',
+            value: '5000 €',
             footerText: 'Updated Just now',
             footerIcon: 'ti-reload'
           },
@@ -235,7 +235,7 @@
             icon: 'ti-server icon-warning',
             title: 'Profit',
             value: '730 €',
-            footerText: 'Expected on Monday',
+            footerText: 'Expected on 18 December',
             footerIcon: 'ti-time'
           }
         ],
@@ -244,14 +244,14 @@
             type: 'info',
             icon: 'ti-briefcase',
             title: 'Investments',
-            value: '20',
+            value: '15',
             footerText: 'During all time',
             footerIcon: 'ti-time'
           },
           {
             type: 'info',
             icon: 'ti-star',
-            value: '3',
+            value: '7',
             title: 'Suggestions',
             footerText: 'Since Yesterday',
             footerIcon: 'ti-time'
