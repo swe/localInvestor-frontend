@@ -6,18 +6,18 @@
 * add companies card
 * add news card
 * add explore feed
+* beautify README
 
 ###Fronts: 
 * add data loading from backend
+* fix text on pages
 
 ###Ivan:
 * user profile page
 * end overview page
 
 ###Rodion:
-* fix text on pages
 * presentation
-* beautify README
 
 ###Everyone
 * подумать какие графики еще можно впихнуть
