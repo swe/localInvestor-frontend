@@ -1,92 +1,54 @@
 <template>
-  <div class="card">
-    <div class="header">
-      <slot name="title"></slot>
-      <p class="category">
-        <slot name="subTitle"></slot>
-      </p>
-    </div>
-    <div class="content">
-      <div :id="chartId" class="ct-chart"></div>
-      <div class="footer">
-        <div class="chart-legend">
-          <slot name="legend"></slot>
-        </div>
-        <hr>
-        <div class="stats">
-          <slot name="footer"></slot>
-        </div>
-        <div class="pull-right">
-        </div>
-      </div>
-    </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12" v-for="company1 in data">
+      <company-card type="hover" :title="company1.title" :description="company1.description" :data="company1.data">
 
+      </company-card>
+    </div>
   </div>
 </template>
 <script>
+  import PaperTable from 'components/UIComponents/PaperTable.vue'
+  import CompanyCard from 'components/UIComponents/Cards/CompanyCard.vue'
+
   export default {
-    name: 'chart-card',
+    name: 'explore-grid',
+    components: {
+      PaperTable,
+      CompanyCard
+    },
     props: {
-      footerText: {
-        type: String,
-        default: ''
-      },
-      headerTitle: {
-        type: String,
-        default: 'Chart title'
-      },
-      chartType: {
-        type: String,
-        default: 'Line' // Line | Pie | Bar
-      },
-      chartOptions: {
-        type: Object,
-        default: () => {
-          return {}
-        }
-      },
-      chartData: {
-        type: Object,
-        default: () => {
-          return {
-            labels: [],
-            series: []
-          }
-        }
+      data: {
+        type: Array,
+        default: () => []
       }
     },
     data () {
-      return {
-        chartId: 'no-id'
-      }
+      return {}
     },
     methods: {
       /***
        * Initializes the chart by merging the chart options sent via props and the default chart options
        */
-      initChart () {
-        var chartIdQuery = `#${this.chartId}`
-        this.$Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions)
+      initGrid () {
+        console.log(this.data)
       },
       /***
        * Assigns a random id to the chart
        */
-      updateChartId () {
+      updateGridId () {
         var currentTime = new Date().getTime().toString()
         var randomInt = this.getRandomInt(0, currentTime)
-        this.chartId = `div_${randomInt}`
+        this.gridId = `div_${randomInt}`
       },
       getRandomInt (min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min
       }
     },
     mounted () {
-      this.updateChartId()
-      this.$nextTick(this.initChart)
+      this.updateGridId()
+      this.$nextTick(this.initGrid)
     }
   }
 
 </script>
-<style>
-
-</style>

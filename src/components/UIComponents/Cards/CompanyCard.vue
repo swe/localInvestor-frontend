@@ -1,5 +1,5 @@
 <template>
-  <div class="card col-md-6 col-xs-12">
+  <div class="card col-md-12 col-xs-12">
     <div class="header">
       <h4 class="no-top__margin">{{title}}</h4>
       <p class="category">
