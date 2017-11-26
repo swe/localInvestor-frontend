@@ -10,9 +10,8 @@
                 <i :class="stats.icon"></i>
               </div>
               <div class="numbers" slot="content">
-                <p>{{stats.title1}}</p>
                 {{stats.value}}
-                <p>{{stats.title2}}</p>
+                <p>{{stats.title}}</p>
               </div>
               <div class="stats" slot="footer">
                 <i :class="stats.footerIcon"></i> {{stats.footerText}}
@@ -59,9 +58,8 @@
                 <i :class="stats.footerIcon"></i> {{stats.footerText}}
               </div>
               <div class="numbers" slot="content">
-                <p>{{stats.title1}}</p>
                 {{stats.value}}
-                <p>{{stats.title2}}</p>
+                <p>{{stats.title}}</p>
               </div>
             </stats-card>
           </div>
@@ -130,7 +128,7 @@
           {
             type: 'info',
             icon: 'ti-wallet',
-            title1: 'Your Balance',
+            title: 'Your Balance',
             value: '500 €',
             footerText: 'Updated Just now',
             footerIcon: 'ti-reload'
@@ -138,7 +136,7 @@
           {
             type: 'info',
             icon: 'ti-time',
-            title1: 'Profit',
+            title: 'Profit',
             value: '730 €',
             footerText: 'Expected on Monday',
             footerIcon: 'ti-time'
@@ -148,7 +146,7 @@
           {
             type: 'info',
             icon: 'ti-briefcase',
-            title2: 'Investments',
+            title: 'Investments',
             value: '20',
             footerText: 'During all time',
             footerIcon: 'ti-time'
@@ -157,7 +155,7 @@
             type: 'info',
             icon: 'ti-star',
             value: '3',
-            title2: 'Suggestions',
+            title: 'Suggestions',
             footerText: 'Since Yesterday',
             footerIcon: 'ti-time'
           }
