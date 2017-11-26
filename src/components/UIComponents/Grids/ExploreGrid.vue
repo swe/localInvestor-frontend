@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div>
     <div class="col-md-6 col-sm-12" v-for="company1 in data">
       <company-card type="hover" :title="company1.title" :description="company1.description" :data="company1.data">
 

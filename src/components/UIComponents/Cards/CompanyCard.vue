@@ -6,53 +6,51 @@
         <slot name="subTitle">{{description}}</slot>
       </p>
     </div>
-    <div class="content">
 
-      <div class="content col-xs-12">
-        <h5>Progress</h5>
-        <!--<div class="row">-->
-        {{current}}
-        <loading-progress :shape="'line'"
-                          :size="'150'"
-                          :width="'150'"
-                          :height="'6'"
-                          :progress="0.30"
-                          :indeterminate="false"
-        />
-        {{target}}
-        <!--</div>-->
-      </div>
+    <div class="content col-xs-12">
+      <h5>Progress</h5>
+      <!--<div class="row">-->
+      {{current}}
+      <loading-progress :shape="'line'"
+                        :size="'150'"
+                        :width="'150'"
+                        :height="'6'"
+                        :progress="0.30"
+                        :indeterminate="false"
+      />
+      {{target}}
+      <!--</div>-->
+    </div>
 
-      <paper-table :data="data" :columns="tableColumns">
+    <paper-table :data="data" :columns="tableColumns">
 
-      </paper-table>
+    </paper-table>
 
-      <div class="content col-xs-12">
-        <h5>RISK</h5>
-        <loading-progress class="progress-red"
-                          :shape="'line'"
-                          :size="'200'"
-                          :width="'200'"
-                          :height="'6'"
-                          :progress="0.30"
-                          :indeterminate="false"
-        />
-      </div>
+    <div class="content col-xs-12">
+      <h5>RISK</h5>
+      <loading-progress class="progress-red"
+                        :shape="'line'"
+                        :size="'150'"
+                        :width="'150'"
+                        :height="'6'"
+                        :progress="0.30"
+                        :indeterminate="false"
+      />
+    </div>
 
-      <div class="content col-xs-12">
-        <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
-          Related News
-        </button>
-        <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
-          Invest
-        </button>
-      </div>
+    <div class="content col-xs-12">
+      <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
+        Related News
+      </button>
+      <button v-on:click="investIn()" type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
+        Invest
+      </button>
+    </div>
 
-      <div class="footer">
-        <hr>
-        <div class="stats">
-          {{basedOn}}
-        </div>
+    <div class="footer fix-footer__z">
+      <hr>
+      <div class="stats">
+        {{basedOn}}
       </div>
     </div>
   </div>
@@ -141,6 +139,9 @@
       },
       getRandomInt (min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min
+      },
+      investIn () {
+        alert(123)
       }
     },
     mounted () {
@@ -151,7 +152,7 @@
 
 </script>
 <style>
-  .progress-red .progress {
+  .progress-red .progress{
     stroke: #eb7316 !important;
   }
 </style>
