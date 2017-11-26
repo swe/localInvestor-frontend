@@ -23,17 +23,6 @@
 
 ---
 
-## Company card
-
-* name
-* description
-* risk
-* due
-* percent
-* progress
-* credit btn
-* related news
-
 ## To fix
 
 * notifications
