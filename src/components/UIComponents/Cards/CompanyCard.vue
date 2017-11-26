@@ -11,8 +11,12 @@
 
       </paper-table>
       <div>
-        * related news
-        * credit btn
+        <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
+          Related News
+        </button>
+        <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
+          Credit
+        </button>
       </div>
 
       <div class="footer">

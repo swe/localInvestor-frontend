@@ -1,77 +1,77 @@
-<template>
-  <div class="card">
-    <div class="header">
-      <h4 class="title">{{title}}</h4>
-    </div>
-    <div class="content">
-      <ul class="list-unstyled team-members">
-        <li>
-          <div class="row" v-for="member in members">
-            <div class="col-xs-3">
-              <div class="avatar">
-                <img :src="member.image" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-              </div>
-            </div>
-            <div class="col-xs-6">
-              {{member.name}}
-              <br>
-              <span :class="getStatusClass(member.status)">
-                <small>{{member.status}}</small>
-              </span>
-            </div>
-  
-            <div class="col-xs-3 text-right">
-              <button class="btn btn-sm btn-default btn-icon">
-                <i class="fa fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</template>
-<script>
-  export default {
-    data () {
-      return {
-        title: 'Last investments',
-        members: [
-          {
-            image: 'static/img/faces/face-0.jpg',
-            name: 'Pidorskoe radio',
-            status: 'In funding process'
-          },
-          {
-            image: 'static/img/faces/face-1.jpg',
-            name: 'Creative Tim',
-            status: 'Funding finished'
-          },
-          {
-            image: 'static/img/faces/face-1.jpg',
-            name: 'Flume',
-            status: 'New status'
-          }
-        ]
-      }
-    },
-    methods: {
-      getStatusClass (status) {
-        switch (status) {
-          case 'Offline':
-            return 'text-muted'
-          case 'Available':
-            return 'text-success'
-          case 'Busy':
-            return 'text-danger'
-          default:
-            return 'text-success'
-        }
-      }
-    }
-  }
+<!--<template>-->
+  <!--<div class="card">-->
+    <!--<div class="header">-->
+      <!--<h4 class="title">{{title}}</h4>-->
+    <!--</div>-->
+    <!--<div class="content">-->
+      <!--<ul class="list-unstyled team-members">-->
+        <!--<li>-->
+          <!--<div class="row" v-for="member in members">-->
+            <!--<div class="col-xs-3">-->
+              <!--<div class="avatar">-->
+                <!--<img :src="member.image" alt="Circle Image" class="img-circle img-no-padding img-responsive">-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-xs-6">-->
+              <!--{{member.name}}-->
+              <!--<br>-->
+              <!--<span :class="getStatusClass(member.status)">-->
+                <!--<small>{{member.status}}</small>-->
+              <!--</span>-->
+            <!--</div>-->
+  <!---->
+            <!--<div class="col-xs-3 text-right">-->
+              <!--<button class="btn btn-sm btn-default btn-icon">-->
+                <!--<i class="fa fa-chevron-right"></i>-->
+              <!--</button>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</template>-->
+<!--<script>-->
+  <!--export default {-->
+    <!--data () {-->
+      <!--return {-->
+        <!--title: 'Last investments',-->
+        <!--members: [-->
+          <!--{-->
+            <!--image: 'static/img/faces/face-0.jpg',-->
+            <!--name: 'Pidorskoe radio',-->
+            <!--status: 'In funding process'-->
+          <!--},-->
+          <!--{-->
+            <!--image: 'static/img/faces/face-1.jpg',-->
+            <!--name: 'Creative Tim',-->
+            <!--status: 'Funding finished'-->
+          <!--},-->
+          <!--{-->
+            <!--image: 'static/img/faces/face-1.jpg',-->
+            <!--name: 'Flume',-->
+            <!--status: 'New status'-->
+          <!--}-->
+        <!--]-->
+      <!--}-->
+    <!--},-->
+    <!--methods: {-->
+      <!--getStatusClass (status) {-->
+        <!--switch (status) {-->
+          <!--case 'Offline':-->
+            <!--return 'text-muted'-->
+          <!--case 'Available':-->
+            <!--return 'text-success'-->
+          <!--case 'Busy':-->
+            <!--return 'text-danger'-->
+          <!--default:-->
+            <!--return 'text-success'-->
+        <!--}-->
+      <!--}-->
+    <!--}-->
+  <!--}-->
 
-</script>
-<style>
-  
-</style>
+<!--</script>-->
+<!--<style>-->
+  <!---->
+<!--</style>-->
