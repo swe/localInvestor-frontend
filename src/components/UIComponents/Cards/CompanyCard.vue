@@ -7,7 +7,13 @@
       </p>
     </div>
     <div class="content">
+      <paper-table :data="progressData" :columns="progressTableColumns">
+
+      </paper-table>
       <paper-table :data="data" :columns="tableColumns">
+
+      </paper-table>
+      <paper-table :data="riskData" :columns="riskTableColumns">
 
       </paper-table>
       <div>
@@ -59,9 +65,17 @@
         type: String,
         default: basedOn[getRandomInt(0, basedOn.length)]
       },
+      riskTableColumns: {
+        type: Array,
+        default: () => ['Risk']
+      },
+      progressTableColumns: {
+        type: Array,
+        default: () => ['Progress']
+      },
       tableColumns: {
         type: Array,
-        default: () => ['Progress', 'Due', 'Percent', 'Risk']
+        default: () => ['Due', 'Percent']
       },
       data: {
         type: Array,
@@ -73,10 +87,32 @@
             risk: 'STARS HERE'
           }
         ]
+      },
+      progressData: {
+        type: Array,
+        default: () => [
+          {
+            progress: 'PROGRESS BAR HERE'
+          }
+        ]
+      },
+      riskData: {
+        type: Array,
+        default: () => [
+          {
+            risk: 'STARS HERE'
+          }
+        ]
       }
     },
     data () {
       return {}
+    },
+    riskData () {
+      return {}
+    },
+    progressData () {
+
     },
     methods: {
       /***

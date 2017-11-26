@@ -10,9 +10,9 @@
   import CompanyCard from 'components/UIComponents/Cards/CompanyCard.vue'
   const tableData = [
     {
-      due: 'LOL 28.12.2018',
+      due: '28.12.2018',
       progress: 'LOL PROGRESS BAR HERE',
-      percent: 'LOL 4%',
+      percent: '4%',
       risk: 'LOL STARS HERE'
     }
   ]
@@ -27,7 +27,9 @@
         company1: {
           title: 'Title of the company',
           description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
-          data: [...tableData]
+          data: [...tableData],
+          riskData: [...tableData],
+          progressData: [...tableData]
         }
       }
     }
