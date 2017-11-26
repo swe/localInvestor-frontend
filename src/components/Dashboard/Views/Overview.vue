@@ -268,7 +268,7 @@
             type: 'info',
             icon: 'ti-briefcase',
             title: 'Investments',
-            value: '15',
+            value: '5',
             footerText: 'During all time',
             footerIcon: 'ti-time'
           },
@@ -301,8 +301,8 @@
           }
         },
         historyTable: {
-          title: 'Loan Responses Pack #32',
-          subTitle: 'You loaned this companies at 12 November',
+          title: 'Loan Responses Pack #1',
+          subTitle: 'You already loaned this companies',
           data: [...historyTableData]
         }
       }
