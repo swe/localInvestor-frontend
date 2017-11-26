@@ -7,16 +7,12 @@
       </p>
     </div>
     <div class="content">
-      <div>
-        ## Company card
+      <paper-table :data="company.tableData" :columns="tableColumns">
 
-        * risk
-        * due
-        * percent
-        * progress
-        * credit btn
+      </paper-table>
+      <div>
         * related news
-        * based on your
+        * credit btn
       </div>
 
       <div class="footer">
@@ -29,6 +25,8 @@
   </div>
 </template>
 <script>
+  import PaperTable from 'components/UIComponents/PaperTable.vue'
+
   const getRandomInt = function (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min
   }
@@ -41,6 +39,9 @@
   ]
   export default {
     name: 'company-card',
+    components: {
+      PaperTable
+    },
     props: {
       footerText: {
         type: String,
@@ -72,10 +73,17 @@
     },
     data () {
       return {
+        tableColumns: ['Due date', 'Progress', 'Percent', 'Risk'],
         company: {
           title: 'Title of company',
           description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
-          basedOn: basedOn[getRandomInt(0, basedOn.length)]
+          basedOn: basedOn[getRandomInt(0, basedOn.length)],
+          tableData: [{
+            'Due date': '28.12.2018',
+            'Progress': 'PROGRESS BAR HERE',
+            'Percent': '4%',
+            'Risk': 'STARS HERE'
+          }]
         }
       }
     },
@@ -83,9 +91,8 @@
       /***
        * Initializes the chart by merging the chart options sent via props and the default chart options
        */
-      initChart () {
-        var chartIdQuery = `#${this.chartId}`
-        this.$Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions)
+      initCard () {
+
       },
       /***
        * Assigns a random id to the chart
@@ -101,7 +108,7 @@
     },
     mounted () {
       this.updateChartId()
-      this.$nextTick(this.initChart)
+      this.$nextTick(this.initCard)
     }
   }
 
