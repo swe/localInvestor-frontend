@@ -23,6 +23,8 @@
 * подумать какие графики еще можно впихнуть
 * train speech / submit project
 
+---
+
 ## Company card
 
 * name
