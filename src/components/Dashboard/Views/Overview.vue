@@ -127,7 +127,7 @@
         moneyStatsCards: [
           {
             type: 'info',
-            icon: 'ti-wallet',
+            icon: 'ti-wallet icon-success',
             title: 'Your Balance',
             value: '500 €',
             footerText: 'Updated Just now',
@@ -135,7 +135,7 @@
           },
           {
             type: 'info',
-            icon: 'ti-time',
+            icon: 'ti-server icon-warning',
             title: 'Profit',
             value: '730 €',
             footerText: 'Expected on Monday',
@@ -153,7 +153,7 @@
           },
           {
             type: 'info',
-            icon: 'ti-star',
+            icon: 'ti-star icon-warning',
             value: '3',
             title: 'Suggestions',
             footerText: 'Since Yesterday',
