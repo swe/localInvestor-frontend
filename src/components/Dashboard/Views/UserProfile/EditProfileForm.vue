@@ -7,7 +7,7 @@
       <form>
         <div class="col-md-12">
           <div class="col-md-4 text-center">
-            <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
+            <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin" href="http://google.com">
               Connect Nordea
             </button>
           </div>
@@ -34,14 +34,14 @@
         <div class="col-md-4 text-center">
           <div class="row">
             <div class="col-md-9">
-                Pandora
+                Superfall
                 <br>
                 <span>
                 <small>In funding process</small>
               </span>
             </div>
             <div class="col-md-3 goTo">
-              <a href="https://google.com" class="lh15">
+              <a href="" class="lh15">
                 <i class="fa fa-chevron-right"></i>
               </a>
             </div>
@@ -50,14 +50,14 @@
         <div class="col-md-4 text-center">
           <div class="row">
             <div class="col-md-9">
-              Spotify
+              Creaturers
               <br>
               <span>
                 <small>Funding finished</small>
               </span>
             </div>
             <div class="col-md-3 goTo">
-              <a href="https://google.com" class="lh15">
+              <a href="" class="lh15">
                 <i class="fa fa-chevron-right"></i>
               </a>
             </div>
@@ -66,14 +66,14 @@
         <div class="col-md-4 text-center">
           <div class="row">
             <div class="col-md-9">
-              Google Inc.
+              Markuu Lauri farm
               <br>
               <span>
                 <small>Funding finished</small>
               </span>
             </div>
             <div class="col-md-3 goTo">
-              <a href="https://google.com" class="lh15">
+              <a href="" class="lh15">
                 <i class="fa fa-chevron-right"></i>
               </a>
             </div>
