@@ -31,7 +31,7 @@
        * Initializes the chart by merging the chart options sent via props and the default chart options
        */
       initGrid () {
-        console.log(this.data)
+        // console.log(this.data)
       },
       /***
        * Assigns a random id to the chart
