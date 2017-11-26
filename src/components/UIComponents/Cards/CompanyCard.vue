@@ -7,16 +7,39 @@
       </p>
     </div>
     <div class="content">
-      <paper-table :data="progressData" :columns="progressTableColumns">
 
-      </paper-table>
+      <div class="content col-xs-12">
+        <h5>Progress</h5>
+        <!--<div class="row">-->
+        {{current}}
+        <loading-progress :shape="'line'"
+                          :size="'200'"
+                          :width="'200'"
+                          :height="'6'"
+                          :progress="0.30"
+                          :indeterminate="false"
+        />
+        {{target}}
+        <!--</div>-->
+      </div>
+
       <paper-table :data="data" :columns="tableColumns">
 
       </paper-table>
-      <paper-table :data="riskData" :columns="riskTableColumns">
 
-      </paper-table>
-      <div>
+      <div class="content col-xs-12">
+        <h5>RISK</h5>
+        <loading-progress class="progress-red"
+                          :shape="'line'"
+                          :size="'200'"
+                          :width="'200'"
+                          :height="'6'"
+                          :progress="0.30"
+                          :indeterminate="false"
+        />
+      </div>
+
+      <div class="content col-xs-12">
         <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
           Related News
         </button>
@@ -35,7 +58,18 @@
   </div>
 </template>
 <script>
+  import Vue from 'vue'
   import PaperTable from 'components/UIComponents/PaperTable.vue'
+  import 'vue-progress-path/dist/vue-progress-path.css'
+  import VueProgress from 'vue-progress-path'
+
+  Vue.use(VueProgress, {
+    progress: 'progress',
+    shape: 'line',
+    size: '200',
+    width: '200',
+    height: '6'
+  })
 
   const getRandomInt = function (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min
@@ -61,46 +95,28 @@
         type: String,
         default: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.'
       },
+      target: {
+        type: String,
+        default: '100,000 €'
+      },
+      current: {
+        type: String,
+        default: '21,000 €'
+      },
       basedOn: {
         type: String,
         default: basedOn[getRandomInt(0, basedOn.length)]
       },
-      riskTableColumns: {
-        type: Array,
-        default: () => ['Risk']
-      },
-      progressTableColumns: {
-        type: Array,
-        default: () => ['Progress']
-      },
       tableColumns: {
         type: Array,
-        default: () => ['Due', 'Percent']
+        default: () => ['Return date', 'Credit percent']
       },
       data: {
         type: Array,
         default: () => [
           {
             due: '28.12.2018',
-            progress: 'PROGRESS BAR HERE',
-            percent: '4%',
-            risk: 'STARS HERE'
-          }
-        ]
-      },
-      progressData: {
-        type: Array,
-        default: () => [
-          {
-            progress: 'PROGRESS BAR HERE'
-          }
-        ]
-      },
-      riskData: {
-        type: Array,
-        default: () => [
-          {
-            risk: 'STARS HERE'
+            percent: '4%'
           }
         ]
       }
@@ -108,18 +124,12 @@
     data () {
       return {}
     },
-    riskData () {
-      return {}
-    },
-    progressData () {
-
-    },
     methods: {
       /***
        * Initializes the chart by merging the chart options sent via props and the default chart options
        */
       initCard () {
-        console.log(this.data)
+//        console.log(this.data)
       },
       /***
        * Assigns a random id to the chart
@@ -141,5 +151,7 @@
 
 </script>
 <style>
-
+  .progress-red .progress {
+    stroke: #eb7316 !important;
+  }
 </style>
