@@ -8,16 +8,16 @@ const SidebarStore = {
       icon: 'ti-bar-chart',
       path: '/overview'
     },
-    {
-      name: 'Portfolio',
-      icon: 'ti-briefcase',
-      path: '/portfolio'
-    },
-    {
-      name: 'Explore',
-      icon: 'ti-eye',
-      path: '/explore'
-    },
+    // {
+    //   name: 'Portfolio',
+    //   icon: 'ti-briefcase',
+    //   path: '/portfolio'
+    // },
+    // {
+    //   name: 'Explore',
+    //   icon: 'ti-eye',
+    //   path: '/explore'
+    // },
     {
       name: 'User Profile',
       icon: 'ti-user',
