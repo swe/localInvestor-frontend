@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <company-card type="hover" :title="company1.title" :description="company1.description" :tableData="company1.tableData">
+    <company-card type="hover" :title="company1.title" :description="company1.description" :data="company1.data">
 
     </company-card>
   </div>
@@ -10,10 +10,10 @@
   import CompanyCard from 'components/UIComponents/Cards/CompanyCard.vue'
   const tableData = [
     {
-      'Due date': 'LOL 28.12.2018',
-      'Progress': 'LOL PROGRESS BAR HERE',
-      'Percent': 'LOL 4%',
-      'Risk': 'LOL STARS HERE'
+      due: 'LOL 28.12.2018',
+      progress: 'LOL PROGRESS BAR HERE',
+      percent: 'LOL 4%',
+      risk: 'LOL STARS HERE'
     }
   ]
 

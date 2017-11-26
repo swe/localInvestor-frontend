@@ -61,16 +61,16 @@
       },
       tableColumns: {
         type: Array,
-        default: () => ['Due date', 'Progress', 'Percent', 'Risk']
+        default: () => ['Progress', 'Due', 'Percent', 'Risk']
       },
       data: {
         type: Array,
         default: () => [
           {
-            'Due date': '28.12.2018',
-            'Progress': 'PROGRESS BAR HERE',
-            'Percent': '4%',
-            'Risk': 'STARS HERE'
+            due: '28.12.2018',
+            progress: 'PROGRESS BAR HERE',
+            percent: '4%',
+            risk: 'STARS HERE'
           }
         ]
       }
@@ -83,7 +83,7 @@
        * Initializes the chart by merging the chart options sent via props and the default chart options
        */
       initCard () {
-        console.log(this.tableData)
+        console.log(this.data)
       },
       /***
        * Assigns a random id to the chart
