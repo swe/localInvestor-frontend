@@ -155,7 +155,7 @@
       }
       let arr = []
       for (let i = 0; i < max; i++) {
-        let x = 100 * getRandomInt(2, 7)
+        let x = 1000 * getRandomInt(1, 3)
         arr.push(this.companyCard(
           fakeData.title[i],
           fakeData.description[i],
@@ -164,8 +164,8 @@
             returnDate: fakeData.returnDate[getRandomInt(0, 3)],
             percent: getRandomInt(2, 7),
             current: x + (9 * x * getRandomInt(0, 1)),
-            target: 10000 * getRandomInt(2, 7),
-            risk: getRandomInt(2, 7) / 10
+            target: 10000 * getRandomInt(3, 8),
+            risk: getRandomInt(1, 7) / 10
           }))
       }
       return arr

@@ -15,7 +15,7 @@
                         :size="'150'"
                         :width="'150'"
                         :height="'6'"
-                        :progress="0.30"
+                        :progress="parseInt(companyData.current) / (parseInt(companyData.target) / 100) / 100"
                         :indeterminate="false"
       />
       {{companyData.target}}
@@ -33,7 +33,7 @@
                         :size="'150'"
                         :width="'150'"
                         :height="'6'"
-                        :progress="0.30"
+                        :progress="companyData.risk"
                         :indeterminate="false"
       />
     </div>
