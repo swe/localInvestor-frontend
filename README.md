@@ -2,21 +2,21 @@
 
 ## Roadmap
 
-###Fedor:
+### Fedor:
 * beautify README
 
-###Fronts: 
+### Fronts: 
 * add data loading from backend
 * fix text on pages
 * beautify test data
 
-###Ivan:
+### Ivan:
 * end overview page
 
-###Rodion:
+### Rodion:
 * presentation
 
-###Everyone
+### Everyone
 * подумать какие графики еще можно впихнуть
 * train speech / submit project
 
@@ -76,6 +76,12 @@ We have gorgeous features, like:
 * We learned about P2P Investing, how it works
 * Understood how anyone can become an investor
 * Suggested everyone how to create money from the air
+
+## Development
+
+* `git clone https://github.com/swe/localInvestor-frontend`
+* for dev: `npm run dev`
+* deploy: `npm run build && gcloud app deploy`
 
 ## What's next for Local Investor
 
