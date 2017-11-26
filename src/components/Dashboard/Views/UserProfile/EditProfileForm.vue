@@ -7,7 +7,7 @@
       <form>
         <div class="col-md-12">
           <div class="col-md-4 text-center">
-            <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin" href="http://google.com">
+            <button v-on:click="clearAuth()" type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
               Connect Nordea
             </button>
           </div>
@@ -87,10 +87,15 @@
 
 </template>
 <script>
+  import Cookies from 'js-cookie'
+
   export default {
     data () {
     },
     methods: {
+      clearAuth: function () {
+        Cookies.remove('key')
+      }
     }
   }
 
