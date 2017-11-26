@@ -1,34 +1,5 @@
 # Local Investor Frontend
 
-## Roadmap
-
-### Fedor:
-* beautify README
-
-### Fronts: 
-* add data loading from backend
-* fix text on pages
-* beautify test data
-
-### Ivan:
-* end overview page
-
-### Rodion:
-* presentation
-
-### Everyone
-* подумать какие графики еще можно впихнуть
-* train speech / submit project
-
----
-
-## To fix
-
-* notifications
-  * uncomment: `Dropdown.vue` and `TopNavbar.vue`
-
----
-
 ## Links
 
 * [Live demo](https://junction-tyzzo.appspot.com/)
