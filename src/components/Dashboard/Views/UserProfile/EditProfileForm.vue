@@ -34,7 +34,7 @@
         <div class="col-md-4 text-center">
           <div class="row">
             <div class="col-md-9">
-                Pidorskoye radio
+                Pandora
                 <br>
                 <span>
                 <small>In funding process</small>
@@ -50,7 +50,7 @@
         <div class="col-md-4 text-center">
           <div class="row">
             <div class="col-md-9">
-              Pidorskoye radio
+              Spotify
               <br>
               <span>
                 <small>Funding finished</small>
@@ -66,7 +66,7 @@
         <div class="col-md-4 text-center">
           <div class="row">
             <div class="col-md-9">
-              Geyskoe radio
+              Google Inc.
               <br>
               <span>
                 <small>Funding finished</small>
