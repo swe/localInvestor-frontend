@@ -69,16 +69,6 @@
     height: '6'
   })
 
-  const getRandomInt = function (min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min
-  }
-  const basedOn = [
-    'based on your Facebook likes',
-    'based on your previous transactions',
-    'based on your Swarm check-ins',
-    'help them to reach the goal',
-    ''
-  ]
   export default {
     name: 'company-card',
     components: {
@@ -107,7 +97,7 @@
       },
       basedOn: {
         type: String,
-        default: basedOn[getRandomInt(0, basedOn.length)]
+        default: ''
       },
       tableColumns: {
         type: Array,

@@ -83,7 +83,7 @@
   let nordeaKey = Cookies.get('key')
   if (nordeaKey) {
     // we already have nordea api key
-
+    // USE IT!!!!!!
   } else {
     // we need to get nordea API key
     let getParameterByName = function (name, url) {
@@ -117,6 +117,39 @@
       // There was a connection error of some sort
     }
     request.send()
+  }
+
+  const getRandomInt = function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
+
+  let create = {
+    companyCard: function () {
+      const basedOn = [
+        'based on your Facebook likes',
+        'based on your previous transactions',
+        'based on your Swarm check-ins',
+        'help them to reach the goal'
+      ]
+      let defaultObj = {
+        title: 'Title of the company',
+        description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
+        basedOn: basedOn[getRandomInt(0, 3)],
+        data: [{
+          'return date': '28.12.2018',
+          'credit percent': '4%'
+        }]
+      }
+
+      return defaultObj
+    },
+    companiesArr: function (max) {
+      let arr = []
+      for (let i = 0; i < max; i++) {
+        arr.push(this.companyCard())
+      }
+      return arr
+    }
   }
 
   const historyTableData = [{
@@ -155,27 +188,6 @@
     'expected date': '8 December',
     'expected profit': '€ 50'
   }]
-
-  const tableData = [
-    {
-      'return date': '28.12.2018',
-      'credit percent': '4%'
-    }
-  ]
-
-  const companiesArr = [
-          // @TODO add custom based on text for each card
-    {
-      title: 'Title of the company',
-      description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
-      data: [...tableData]
-    },
-    {
-      title: 'Title of the company',
-      description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
-      data: [...tableData]
-    }
-  ]
 
   export default {
     components: {
@@ -226,7 +238,7 @@
           }
         ],
         companies: {
-          data: [...companiesArr]
+          data: create.companiesArr(6)
         },
         paymentsChart: {
           data: {

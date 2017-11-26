@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="col-md-6 col-sm-12" v-for="company1 in data">
-      <company-card type="hover" :title="company1.title" :description="company1.description" :data="company1.data">
+      <company-card type="hover" :title="company1.title" :description="company1.description" :data="company1.data" :basedOn="company1.basedOn">
 
       </company-card>
     </div>
@@ -31,7 +31,7 @@
        * Initializes the chart by merging the chart options sent via props and the default chart options
        */
       initGrid () {
-        // console.log(this.data)
+        // console.log(this.basedOn)
       },
       /***
        * Assigns a random id to the chart
