@@ -66,7 +66,9 @@
         </div>
         <!--Explore feed-->
         <div class="row">
-          suggestions/explore feed
+          <explore-grid type="hover" :data="companies.data">
+
+          </explore-grid>
         </div>
       </div>
   </div>
@@ -75,6 +77,7 @@
   import StatsCard from 'components/UIComponents/Cards/StatsCard.vue'
   import ChartCard from 'components/UIComponents/Cards/ChartCard.vue'
   import HistoryGrid from 'components/UIComponents/Grids/HistoryGrid.vue'
+  import ExploreGrid from 'components/UIComponents/Grids/ExploreGrid.vue'
 
   const historyTableData = [{
     '#': 1,
@@ -113,11 +116,32 @@
     'expected profit': '€ 50'
   }]
 
+  const tableData = [
+    {
+      'return date': '28.12.2018',
+      'credit percent': '4%'
+    }
+  ]
+
+  const companiesArr = [
+    {
+      title: 'Title of the company',
+      description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
+      data: [...tableData]
+    },
+    {
+      title: 'Title of the company',
+      description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
+      data: [...tableData]
+    }
+  ]
+
   export default {
     components: {
       HistoryGrid,
       StatsCard,
-      ChartCard
+      ChartCard,
+      ExploreGrid
     },
     /**
      * Chart data used to render stats, charts. Should be replaced with server data
@@ -160,6 +184,9 @@
             footerIcon: 'ti-time'
           }
         ],
+        companies: {
+          data: [...companiesArr]
+        },
         paymentsChart: {
           data: {
             labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],

@@ -13,9 +13,7 @@
   const tableData = [
     {
       'return date': '28.12.2018',
-      progress: 'LOL PROGRESS BAR HERE',
-      'credit percent': '4%',
-      risk: 'LOL STARS HERE'
+      'credit percent': '4%'
     }
   ]
 
