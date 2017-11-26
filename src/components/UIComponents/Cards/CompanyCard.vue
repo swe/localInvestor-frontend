@@ -85,6 +85,10 @@
       PaperTable
     },
     props: {
+      counter: {
+        type: Number,
+        default: 0
+      },
       title: {
         type: String,
         default: 'Title of the company'
@@ -141,7 +145,7 @@
         return Math.floor(Math.random() * (max - min + 1)) + min
       },
       investIn () {
-        alert(123)
+        // this.counter++
       }
     },
     mounted () {
