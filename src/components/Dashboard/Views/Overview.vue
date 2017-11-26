@@ -1,49 +1,49 @@
 <template>
-    <div class="row">
-      <!--Money Overview-->
-      <div class="col-md-6 col-xs-12">
-        <!--Money Stats cards-->
-        <div class="row">
-          <div class="col-lg-6 col-sm-12" v-for="stats in moneyStatsCards">
-            <stats-card>
-              <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
-                <i :class="stats.icon"></i>
-              </div>
-              <div class="numbers" slot="content">
-                {{stats.value}}
-                <p>{{stats.title}}</p>
-              </div>
-              <div class="stats" slot="footer">
-                <i :class="stats.footerIcon"></i> {{stats.footerText}}
-              </div>
-            </stats-card>
-          </div>
-        </div>
-        <!--Charts-->
-        <div class="row">
-          <div class="col-md-12 col-xs-12">
-            <chart-card :chart-data="paymentsChart.data" :chart-options="paymentsChart.options">
-              <h4 class="title" slot="title">Upcoming payments</h4>
-              <span slot="subTitle">Expected date: 18 December</span>
-              <span slot="footer">Based on your previous incomings</span>
-              <div slot="legend">
-                <i class="fa fa-circle text-success"></i> Last payments
-                <i class="fa fa-circle text-warning"></i> Expected payments
-              </div>
-            </chart-card>
-          </div>
-        </div>
-        <!--Payments history-->
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <history-grid :title="historyTable.title" :sub-title="historyTable.subTitle" :data="historyTable.data">
-
-              </history-grid>
+  <div class="row">
+    <!--Money Overview-->
+    <div class="col-md-6 col-xs-12">
+      <!--Money Stats cards-->
+      <div class="row">
+        <div class="col-lg-6 col-sm-12" v-for="stats in moneyStatsCards">
+          <stats-card>
+            <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
+              <i :class="stats.icon"></i>
             </div>
+            <div class="numbers" slot="content">
+              {{stats.value}}
+              <p>{{stats.title}}</p>
+            </div>
+            <div class="stats" slot="footer">
+              <i :class="stats.footerIcon"></i> {{stats.footerText}}
+            </div>
+          </stats-card>
+        </div>
+      </div>
+      <!--Charts-->
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <chart-card :chart-data="paymentsChart.data" :chart-options="paymentsChart.options">
+            <h4 class="title" slot="title">Upcoming payments</h4>
+            <span slot="subTitle">Expected date: 18 December</span>
+            <span slot="footer">Based on your previous incomings</span>
+            <div slot="legend">
+              <i class="fa fa-circle text-success"></i> Last payments
+              <i class="fa fa-circle text-warning"></i> Expected payments
+            </div>
+          </chart-card>
+        </div>
+      </div>
+      <!--Payments history-->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <history-grid :title="historyTable.title" :sub-title="historyTable.subTitle" :data="historyTable.data">
+
+            </history-grid>
           </div>
         </div>
       </div>
+    </div>
 
       <!--Explore overview-->
       <div class="col-md-6 col-xs-12 row fix-row__margin">
@@ -81,6 +81,38 @@
   import Cookies from 'js-cookie'
 
   console.log(Cookies.get())
+
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  var request = new XMLHttpRequest()
+  request.open('GET', 'https://api-dot-junction-tyzzo.appspot.com/api/requests', true)
+  request.onload = function () {
+    if (this.status === 401) {
+      var data = JSON.parse(this.response)
+      var key = getParameterByName('session_key')
+      console.log(key)
+      if(true) {
+
+      } else {
+        window.location.href = data['redirect']
+      }
+    } else {
+      // We reached our target server, but it returned an error
+
+    }
+  }
+  request.onerror = function () {
+    // There was a connection error of some sort
+  }
+  request.send()
 
   const historyTableData = [{
     '#': 1,
