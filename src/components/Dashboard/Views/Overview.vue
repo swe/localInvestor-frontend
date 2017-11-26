@@ -78,6 +78,9 @@
   import ChartCard from 'components/UIComponents/Cards/ChartCard.vue'
   import HistoryGrid from 'components/UIComponents/Grids/HistoryGrid.vue'
   import ExploreGrid from 'components/UIComponents/Grids/ExploreGrid.vue'
+  import Cookies from 'js-cookie'
+
+  console.log(Cookies.get())
 
   const historyTableData = [{
     '#': 1,
