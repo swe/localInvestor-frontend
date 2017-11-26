@@ -198,39 +198,39 @@
 
   const historyTableData = [{
     '#': 1,
-    name: 'Dakota Rice',
-    summary: '€ 1000',
+    name: 'Creaturers',
+    summary: '10000 €',
     'loan %': '5',
     'expected date': '8 December',
-    'expected profit': '€ 50'
+    'expected profit': '€ 400'
   }, {
     '#': 2,
-    name: 'Dakota Rice',
-    summary: '€ 1000',
+    name: 'Superfall, LLC',
+    summary: '€ 3000',
     'loan %': '5',
     'expected date': '8 December',
-    'expected profit': '€ 50'
+    'expected profit': '€ 100'
   }, {
     '#': 3,
-    name: 'Dakota Rice',
-    summary: '€ 1000',
+    name: 'Markuu Lauri farm',
+    summary: '€ 5500',
     'loan %': '5',
     'expected date': '8 December',
-    'expected profit': '€ 50'
+    'expected profit': '€ 125'
   }, {
     '#': 4,
-    name: 'Dakota Rice',
-    summary: '€ 1000',
+    name: 'Right Flight Inc.',
+    summary: '€ 100000',
     'loan %': '5',
     'expected date': '8 December',
-    'expected profit': '€ 50'
+    'expected profit': '€ 500'
   }, {
     '#': 5,
-    name: 'Dakota Rice',
-    summary: '€ 1000',
+    name: 'Phonogator',
+    summary: '€ 7000',
     'loan %': '5',
     'expected date': '8 December',
-    'expected profit': '€ 50'
+    'expected profit': '€ 350'
   }]
 
   export default {
