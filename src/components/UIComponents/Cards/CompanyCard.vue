@@ -10,7 +10,7 @@
     <div class="content col-xs-12">
       <h5>Progress</h5>
       <!--<div class="row">-->
-      {{current}}
+      {{companyData.current}}
       <loading-progress :shape="'line'"
                         :size="'150'"
                         :width="'150'"
@@ -18,11 +18,11 @@
                         :progress="0.30"
                         :indeterminate="false"
       />
-      {{target}}
+      {{companyData.target}}
       <!--</div>-->
     </div>
 
-    <paper-table :data="data" :columns="tableColumns">
+    <paper-table :data="companyData.data" :columns="tableColumns">
 
     </paper-table>
 
@@ -50,7 +50,7 @@
     <div class="footer fix-footer__z">
       <hr>
       <div class="stats">
-        {{basedOn}}
+        {{companyData.basedOn}}
       </div>
     </div>
   </div>
@@ -75,9 +75,9 @@
       PaperTable
     },
     props: {
-      counter: {
-        type: Number,
-        default: 0
+      companyData: {
+        type: Object,
+        default: {}
       },
       title: {
         type: String,
@@ -87,30 +87,9 @@
         type: String,
         default: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.'
       },
-      target: {
-        type: String,
-        default: '100,000 €'
-      },
-      current: {
-        type: String,
-        default: '21,000 €'
-      },
-      basedOn: {
-        type: String,
-        default: ''
-      },
       tableColumns: {
         type: Array,
         default: () => ['Return date', 'Credit percent']
-      },
-      data: {
-        type: Array,
-        default: () => [
-          {
-            due: '28.12.2018',
-            percent: '4%'
-          }
-        ]
       }
     },
     data () {

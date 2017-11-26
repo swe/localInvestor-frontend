@@ -124,29 +124,49 @@
   }
 
   let create = {
-    companyCard: function () {
-      const basedOn = [
-        'based on your Facebook likes',
-        'based on your previous transactions',
-        'based on your Swarm check-ins',
-        'help them to reach the goal'
-      ]
+    companyCard: function (title, description, companyData) {
       let defaultObj = {
-        title: 'Title of the company',
-        description: 'Really long description that nobody reads it anyway. Initializes the chart by merging the chart options sent via props and the default chart options.',
-        basedOn: basedOn[getRandomInt(0, 3)],
-        data: [{
-          'return date': '28.12.2018',
-          'credit percent': '4%'
-        }]
+        title: title,
+        description: description,
+        companyData: {
+          basedOn: companyData.basedOn,
+          data: [{
+            'return date': companyData.returnDate,
+            'credit percent': companyData.percent + '%'
+          }],
+          current: companyData.current + ' €',
+          target: companyData.target + ' €',
+          risk: companyData.risk
+        }
       }
-
       return defaultObj
     },
     companiesArr: function (max) {
+      const fakeData = {
+        basedOn: [
+          'based on your Facebook likes',
+          'based on your previous transactions',
+          'based on your Swarm check-ins',
+          'help them to reach the goal'
+        ],
+        title: [],
+        description: [],
+        returnDate: []
+      }
       let arr = []
       for (let i = 0; i < max; i++) {
-        arr.push(this.companyCard())
+        let x = 100 * getRandomInt(2, 7)
+        arr.push(this.companyCard(
+          fakeData.title[i],
+          fakeData.description[i],
+          {
+            basedOn: fakeData.basedOn[getRandomInt(0, 3)],
+            returnDate: fakeData.returnDate[getRandomInt(0, 3)],
+            percent: getRandomInt(2, 7),
+            current: x + (9 * x * getRandomInt(0, 1)),
+            target: 10000 * getRandomInt(2, 7),
+            risk: getRandomInt(2, 7) / 10
+          }))
       }
       return arr
     }
