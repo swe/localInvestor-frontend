@@ -11,7 +11,6 @@
 * beautify test data
 
 ###Ivan:
-* user profile page
 * end overview page
 
 ###Rodion:
