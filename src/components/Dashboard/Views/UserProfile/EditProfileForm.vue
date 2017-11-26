@@ -7,7 +7,7 @@
       <form>
         <div class="col-md-12">
           <div class="col-md-4 text-center">
-            <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
+            <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin" href="http://google.com">
               Connect Nordea
             </button>
           </div>
@@ -41,7 +41,7 @@
               </span>
             </div>
             <div class="col-md-3 goTo">
-              <a href="https://google.com" class="lh15">
+              <a href="" class="lh15">
                 <i class="fa fa-chevron-right"></i>
               </a>
             </div>
@@ -57,7 +57,7 @@
               </span>
             </div>
             <div class="col-md-3 goTo">
-              <a href="https://google.com" class="lh15">
+              <a href="" class="lh15">
                 <i class="fa fa-chevron-right"></i>
               </a>
             </div>
@@ -73,7 +73,7 @@
               </span>
             </div>
             <div class="col-md-3 goTo">
-              <a href="https://google.com" class="lh15">
+              <a href="" class="lh15">
                 <i class="fa fa-chevron-right"></i>
               </a>
             </div>
