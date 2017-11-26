@@ -6,9 +6,6 @@
 * [Backend source](https://github.com/swe/localInvestor-backend)
 * [Devpost page](https://devpost.com/software/local-investor)
 
-![Overview page](https://raw.githubusercontent.com/swe/localInvestor-frontend/master/devpost/screenshots/screen1.jpg)
-![Company card](https://raw.githubusercontent.com/swe/localInvestor-frontend/master/devpost/screenshots/screen2.jpg)
-
 ## Inspiration 
 
 Our idea based on peer-to-peer landing, but in a more personalized way. We thought about how we can make finance flow more interactive and relatable to customers. So there is an idea about using information about recent purchases and interest based on social media.
