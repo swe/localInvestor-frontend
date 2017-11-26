@@ -55,13 +55,13 @@
               <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
                 <i :class="stats.icon"></i>
               </div>
+              <div class="stats" slot="footer">
+                <i :class="stats.footerIcon"></i> {{stats.footerText}}
+              </div>
               <div class="numbers" slot="content">
                 <p>{{stats.title1}}</p>
                 {{stats.value}}
                 <p>{{stats.title2}}</p>
-              </div>
-              <div class="stats" slot="footer">
-                <i :class="stats.footerIcon"></i> {{stats.footerText}}
               </div>
             </stats-card>
           </div>
@@ -131,15 +131,15 @@
             type: 'info',
             icon: 'ti-wallet',
             title1: 'Your Balance',
-            value: '€ 1,337',
+            value: '500 €',
             footerText: 'Updated Just now',
             footerIcon: 'ti-reload'
           },
           {
             type: 'info',
             icon: 'ti-time',
-            title1: 'Upcoming payment',
-            value: '€ 137',
+            title1: 'Profit',
+            value: '730 €',
             footerText: 'Expected on Monday',
             footerIcon: 'ti-time'
           }
@@ -148,7 +148,7 @@
           {
             type: 'info',
             icon: 'ti-briefcase',
-            title2: 'companies loaned by you',
+            title2: 'Investments',
             value: '20',
             footerText: 'During all time',
             footerIcon: 'ti-time'
@@ -157,7 +157,7 @@
             type: 'info',
             icon: 'ti-star',
             value: '3',
-            title2: 'Suggestions found',
+            title2: 'Suggestions',
             footerText: 'Since Yesterday',
             footerIcon: 'ti-time'
           }
