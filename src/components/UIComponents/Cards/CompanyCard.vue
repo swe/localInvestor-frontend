@@ -21,7 +21,7 @@
           Related News
         </button>
         <button type="submit" class="btn btn-nordea btn-fill btn-wd btn-margin">
-          Credit
+          Invest
         </button>
       </div>
 
