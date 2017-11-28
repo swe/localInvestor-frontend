@@ -18,6 +18,7 @@ Basically, it offers good conditions to customers, bank and small business. And 
 
 To create this amazing app we used:
 * [vue.js](https://github.com/vuejs/vue)
+* [Awesome vue-paper-dashboard](https://github.com/cristijora/vue-paper-dashboard)
 * [vue-progress-path](https://github.com/Akryum/vue-progress-path)
 * liters of :coffee: and energy drinks
 
